@@ -22,13 +22,11 @@ $( function() {
     	var percent = (document.documentElement.clientWidth*0.7)-30;
     	var donde = Math.round((($('#ejercicio').position().left)*rango_eje)/percent);
     	$("#ejercicio-filler").css("width",$('#ejercicio').position().left+29);
-    	if (donde>3) {
-    		$('#ejercicio-dato').html("4-7");
-    	} else {
-    		$('#ejercicio-dato').html("0-3");
-    	}
+    	$('#ejercicio-dato').html(donde);
       }
   	});
+
+  	$( ".accordion" ).accordion({ collapsible:true,active:false,animate:300,heightStyle:"content" });
 
 } );
 

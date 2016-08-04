@@ -348,7 +348,7 @@ Swipe.prototype = {
 
 };
 
-// new Swipe(document.getElementById('scroller'));
-// var slider1 = new Swipe(document.getElementById('scroller'));
+new Swipe(document.getElementById('scroller'));
+var slider1 = new Swipe(document.getElementById('scroller'));
 
 
