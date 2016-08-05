@@ -473,6 +473,25 @@ $(window).load(function(){
 			}
 		});
 
+		$('.centro').click(function() {
+			if(!$('.overscreen').is(':visible')){
+				$('.overscreen').show();
+				setTimeout(function() {$('.overscreen').addClass('active');}, 200);
+			} else {
+				$('.overscreen').removeClass('active');
+				setTimeout(function() {$('.overscreen').hide();}, 800);
+			}
+			$('#container').toggleClass('blurred');
+			$('a.centro img').toggleClass('onn');
+		});
+
+		$('.ov-filler').click(function() {
+			$('.overscreen').removeClass('active');
+			setTimeout(function() {$('.overscreen').hide();}, 800);
+			$('#container').removeClass('blurred');
+			$('a.centro img').removeClass('onn');
+		});
+
 	});
 
 });
