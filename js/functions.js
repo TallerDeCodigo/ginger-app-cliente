@@ -492,6 +492,29 @@ $(window).load(function(){
 			$('a.centro img').removeClass('onn');
 		});
 
+		$('svg.consume').click(function() {
+			$(this).parent().parent().addClass('consumido');
+			$(this).html('<use xlink:href="#consume2"></use>');
+		});
+
+		$('svg.noconsu').click(function() {
+			$(this).parent().parent().addClass('cancelado');
+			$(this).html('<use xlink:href="#noconsu2"></use>');
+		});
+
+		var texto = 'Mostrar Completados';
+
+		$('.toggle-complete').click(function() {
+			if ($(this).html()=='Mostrar Completados') {
+				$(this).html('Ocultar Completados');
+				$('.platillo.consumido').show();
+			} else {
+				$(this).html('Mostrar Completados');
+				$('.platillo.consumido').hide();
+			}
+			
+		});
+
 	});
 
 });
